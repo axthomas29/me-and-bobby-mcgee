@@ -40,6 +40,19 @@ nav ul li a {
   color: $black;
   &:hover,
   &:focus {
-    color: mix($pink, white, 50%);
+    color: $pink;
   }
+}
+
+blockquote {
+  font-style: italic;
+  color: $grey;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+.box {
+  border: 4px solid $black;
 }
