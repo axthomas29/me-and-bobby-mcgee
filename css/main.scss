@@ -1,0 +1,45 @@
+@font-face {
+  font-family: 'Pompadour';
+  src: url('../fonts/pompadour.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Cooper Black';
+  src: url(../fonts/cooper-black.otf) format('opentype');
+}
+
+$pompadour: 'Pompadour', sans-serif;
+$cooper-black: 'Cooper Black', serif;
+$white: #f9f9f9;
+$pink: #e7a1a3;
+$sienna: #c98b5b;
+$grey: #465553;
+$black: #020202;
+
+body {
+  background-color: $white;
+  font-family: $pompadour;
+  color: $black;
+  font-size: 2em;
+}
+
+h1 {
+  font-family: $cooper-black;
+  color: $sienna;
+  font-size: 3em;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline;
+}
+
+nav ul li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+  &:hover,
+  &:focus {
+    color: mix($pink, white, 50%);
+  }
+}
