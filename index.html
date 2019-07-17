@@ -13,102 +13,107 @@
     />
   </head>
   <body>
-    <div class="main-content">
-      <!-- Navigation Bar -->
-      <div class="container">
-        <header>
-          <nav>
-            <img src="img/logo.png" alt="logo" />
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#book">Book</a></li>
-              <li><a href="#speaking">Speaking</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="header-divider"></div>
-          <div class="hero-image">
-            <img src="img/hug-dog-2.jpg" alt="dog" />
-          </div>
-        </header>
-      </div>
-      <!-- End of Navigation Bar -->
-      <!-- About Section -->
+    <input type="checkbox" id="menu" />
+    <label for="menu" class="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#book">Book</a></li>
+        <li><a hred="#speaking">Speaking</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
       <article>
-        <section>
-          <h1>About Me</h1>
-          <blockquote
-            cite="https://genius.com/Janis-joplin-me-and-bobby-mcgee-lyrics"
-          >
-            "Freedom's just another word for nothing left to lose."
-          </blockquote>
-          <div class="divider"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </section>
-        <figure>
-          <img src="img/closing-eyes.jpg" alt="model closing her eyes" />
-          <img src="img/posing-dog.jpg" alt="model with dog" />
-          <img src="img/kiss-dog.jpg" alt="model kissing dog" />
-        </figure>
-        <section>
-          <h1>The Book</h1>
-          <blockquote
-            cite="https://genius.com/Janis-joplin-me-and-bobby-mcgee-lyrics"
-          >
-            "Through all kinds of weather, through everything we done. Yeah,
-            Bobby baby kept me from the cold."
-          </blockquote>
-          <div class="divider"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </section>
-        <figure>
-          <img src="img/bowl-dog.jpg" alt="giving bowl of water to dog" />
-          <img src="img/nose-dog.jpg" alt="model with dog" />
-          <img src="img/yawn-dog.jpg" alt="dog yawning" />
-        </figure>
-        <section>
-          <h1>Speaking</h1>
-          <blockquote
-            cite="https://genius.com/Janis-joplin-me-and-bobby-mcgee-lyrics"
-          >
-            "From the Kentucky coal mines to the California sun..."
-          </blockquote>
-          <div class="divider"></div>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </section>
-        <figure>
-          <img
-            src="img/chair-laying-down-dog.jpg"
-            alt="dog laying down near model"
-          />
-          <img src="img/sitting-dog.jpg" alt="dog sitting" />
-        </figure>
-        <section>
+        <header>
+            <img src="img/logo.png" alt="logo" />
+          </header>
+          <section id="about">
+            <div class="container">
+              <h1>About Me</h1>
+              <blockquote
+                cite="https://genius.com/Janis-joplin-me-and-bobby-mcgee-lyrics"
+              >
+                "Freedom's just another word for nothing left to lose."
+              </blockquote>
+              <div class="divider"></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+          </section>
+              <figure class="img">
+                <img src="img/closing-eyes.jpg" alt="model closing her eyes" />
+                <img src="img/posing-dog.jpg" alt="model with dog" />
+                <img src="img/kiss-dog.jpg" alt="model kissing dog" />
+              </figure>
+            </div>
+          </section>
+          <section id="about">
+              <div class="container">
+                <h1>The Book</h1>
+                <blockquote
+                  cite="https://genius.com/Janis-joplin-me-and-bobby-mcgee-lyrics">
+                  "Through all kinds of weather, through everything we done. Yeah,
+                  Bobby baby kept me from the cold."
+                </blockquote>
+                <div class="divider"></div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                  ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat. Duis aute irure dolor in
+                  reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                  culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+              </div>
+            </section>
+              <figure class="img">
+                <img src="img/bowl-dog.jpg" alt="giving bowl of water to dog" />
+                <img src="img/nose-dog.jpg" alt="model with dog" />
+                <img src="img/yawn-dog.jpg" alt="dog yawning" />
+              </figure>
+              </div>
+            </section>
+          <section id="speaking">
+            <div class="container">
+              <h1>Speaking</h1>
+              <blockquote
+                cite="https://genius.com/Janis-joplin-me-and-bobby-mcgee-lyrics">
+                "From the Kentucky coal mines to the California sun..."
+              </blockquote>
+              <div class="divider"></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </section>
+            <figure class="img">
+              <img src="img/chair-laying-down-dog.jpg" alt="dog laying down near model" />
+              <img src="img/sitting-dog.jpg" alt="dog sitting" />
+            </figure>
+            </div>
+          </section>
+        <section id="contact">
           <h1>Contact Me</h1>
           <blockquote
             cite="https://genius.com/Janis-joplin-me-and-bobby-mcgee-lyrics"
@@ -117,17 +122,18 @@
             holdin' Bobby's body next to mine."
           </blockquote>
           <div class="divider"></div>
-          <form class="form" action="index.html" method="post">
-            <input
-              type="text"
-              name="firstname"
-              value="First Name"
-            /><br /><br />
-            <input type="text" name="email" value="E-mail" /><br /><br />
-            <input type="submit" value="Submit" />
+          <form>
+            <label>Your Name :</label>
+            <input type="text" placeholder="Bobby McGee" />
+            <label>Your E-mail :</label>
+            <input type="text" placeholder="example@mail.com" />
+            <label>Your Message :</label>
+            <input type="text" placeholder="Hello! Blah, blah, blah..." />
+            <input type="submit" value="Done" />
           </form>
         </section>
       </article>
+    </main>
       <!-- End of Speaking -->
       <!-- Footer Section -->
       <footer>
@@ -160,7 +166,6 @@
         </div>
       </footer>
       <!-- End of Footer -->
-    </div>
     <script src="js/main.js"></script>
   </body>
 </html>

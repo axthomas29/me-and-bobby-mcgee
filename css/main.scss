@@ -1,3 +1,4 @@
+// Fonts
 @font-face {
   font-family: 'Pompadour';
   src: url('../fonts/pompadour.otf') format('opentype');
@@ -8,6 +9,9 @@
   src: url(../fonts/cooper-black.otf) format('opentype');
 }
 
+$base-duration: 500ms;
+
+// Colors
 $pompadour: 'Pompadour', sans-serif;
 $cooper-black: 'Cooper Black', serif;
 $white: #f9f9f9;
@@ -16,12 +20,76 @@ $sienna: #c98b5b;
 $grey: #465553;
 $black: #020202;
 
+// Breakpoits
+$sm: new-breakpoint(min-width 320px);
+$med: new-breakpoint(min-width 768px);
+$lg: new-breakpoint(min-width 1024px);
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
 body {
   background-color: $white;
   font-family: $pompadour;
   color: $black;
+  margin: 0;
+  padding: 0;
   font-size: 1em;
+  font-smooth: auto;
   text-align: center;
+  overflow-x: hidden;
+}
+
+.menu {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+  background-color: $sienna;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba($black, 0.2);
+  transition: transform 250ms ease;
+  cursor: pointer;
+  z-index: 200;
+
+  span {
+    position: relative;
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: $black;
+    float: left;
+    transform-origin: center center;
+    transition: transform 250ms ease;
+    z-index: 200;
+
+    &:nth-last-of-type(1) {
+      transform: translateY(-5px);
+    }
+
+    &:nth-of-type(3) {
+      transform: translateY(5px);
+    }
+  }
+}
+
+#menu {
+  display: none;
+
+  &:checked ~ .menu {
+    background-color: transparent;
+    transform: rotate(360deg);
+    transition: transform 250ms ease;
+  }
 }
 
 h1 {
@@ -92,4 +160,42 @@ img {
 header,
 footer {
   grid-column: 1 / span 2;
+}
+
+form {
+  text-align: left;
+}
+
+.back h1 {
+  margin: 0;
+}
+
+form label,
+form input {
+  display: block;
+}
+
+form input,
+form textarea {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid #444;
+  padding: 5px;
+  width: 100%;
+  color: $black;
+}
+
+form label {
+  margin: 15px 0;
+}
+
+form input[type='submit'] {
+  display: block;
+  width: auto;
+  margin: 10px auto;
+  padding: 5px 10px;
+  border: 3px solid $pink;
+  border-radius: 4px;
+  color: $black;
+  cursor: pointer;
 }
