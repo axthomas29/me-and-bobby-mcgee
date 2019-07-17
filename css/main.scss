@@ -20,18 +20,20 @@ body {
   background-color: $white;
   font-family: $pompadour;
   color: $black;
-  font-size: 2em;
+  font-size: 1em;
+  text-align: center;
 }
 
 h1 {
   font-family: $cooper-black;
   color: $sienna;
-  font-size: 3em;
+  font-size: 5em;
 }
 
 nav ul li {
   list-style-type: none;
   display: inline;
+  font-size: 2em;
 }
 
 nav ul li a {
@@ -53,6 +55,41 @@ p {
   text-transform: uppercase;
 }
 
-.box {
-  border: 4px solid $black;
+article {
+  display: grid;
+  grid-template-columns:
+    [full-start] minmax(1em, 1fr)
+    [main-start] minmax(0, 56em) [main-end]
+    minmax(1em, 1fr) [full-end];
+  grid-gap: 1em;
+}
+
+section {
+  grid-column: main;
+}
+
+figure {
+  grid-column: full;
+}
+
+body {
+  padding: 2em 0;
+}
+
+article > * {
+  background-color: $white;
+  padding: 2em;
+}
+
+figure {
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+header,
+footer {
+  grid-column: 1 / span 2;
 }
