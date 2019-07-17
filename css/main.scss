@@ -192,11 +192,9 @@ main {
   transform: translateX(0px);
   transition: transform $base-duration ease;
   z-index: 0;
+  background-color: $white;
 
   header {
-    display: block;
-    width: 75%;
-    height: 400px;
     background-color: $white;
 
     img {
@@ -234,6 +232,11 @@ blockquote {
   margin-bottom: 30px;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 form {
   text-align: left;
 }
@@ -245,6 +248,7 @@ form {
 form label,
 form input {
   display: block;
+  text-transform: uppercase;
 }
 
 form input,
@@ -255,6 +259,7 @@ form textarea {
   padding: 5px;
   width: 100%;
   color: $black;
+  text-transform: initial;
 }
 
 form label {
@@ -270,4 +275,6 @@ form input[type='submit'] {
   border-radius: 4px;
   color: $black;
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
 }

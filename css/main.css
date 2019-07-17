@@ -194,11 +194,9 @@ main {
   -o-transition: transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  z-index: 0; }
+  z-index: 0;
+  background-color: #f9f9f9; }
   main header {
-    display: block;
-    width: 75%;
-    height: 400px;
     background-color: #f9f9f9; }
     main header img {
       display: block;
@@ -227,6 +225,10 @@ blockquote {
   color: #465553;
   margin-bottom: 30px; }
 
+img {
+  width: 100%;
+  height: auto; }
+
 form {
   text-align: left; }
 
@@ -235,7 +237,8 @@ form {
 
 form label,
 form input {
-  display: block; }
+  display: block;
+  text-transform: uppercase; }
 
 form input,
 form textarea {
@@ -244,7 +247,8 @@ form textarea {
   border-bottom: 2px solid #465553;
   padding: 5px;
   width: 100%;
-  color: #020202; }
+  color: #020202;
+  text-transform: initial; }
 
 form label {
   margin: 15px 0; }
@@ -257,4 +261,6 @@ form input[type='submit'] {
   border: 3px solid #e7a1a3;
   border-radius: 4px;
   color: #020202;
-  cursor: pointer; }
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold; }
