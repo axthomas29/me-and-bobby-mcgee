@@ -6,6 +6,9 @@
   font-family: 'Cooper Black';
   src: url(../fonts/cooper-black.otf) format("opentype"); }
 
+html {
+  scroll-behavior: smooth; }
+
 *,
 *:before,
 *:after {
@@ -128,7 +131,7 @@ body {
   top: 0;
   left: -210px;
   width: 300px;
-  height: 100vh;
+  height: 500vh;
   margin: 0;
   padding: 0;
   background-color: #020202;
@@ -197,7 +200,8 @@ main {
   z-index: 0;
   background-color: #f9f9f9; }
   main header {
-    background-color: #f9f9f9; }
+    background-color: #f9f9f9;
+    margin-left: 50px; }
     main header img {
       display: block;
       max-width: 100%;
@@ -218,12 +222,15 @@ section {
   z-index: 100; }
   section p {
     margin-bottom: 30px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    line-height: 1.2em; }
 
 blockquote {
   font-style: italic;
   color: #465553;
-  margin-bottom: 30px; }
+  padding-bottom: 20px;
+  border-bottom: 1px solid #020202;
+  line-height: 1.2em; }
 
 img {
   width: 100%;
