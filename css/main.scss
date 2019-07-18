@@ -25,8 +25,10 @@ $sm: new-breakpoint(min-width 320px);
 $med: new-breakpoint(min-width 768px);
 $lg: new-breakpoint(min-width 1024px);
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 *,
@@ -36,17 +38,25 @@ html {
   outline: none;
 }
 
+// General
+
+html {
+  width: 100%;
+}
+
 body {
   background-color: $white;
   font-family: $pompadour;
   color: $black;
   margin: 0;
   padding: 0;
-  font-size: 1em;
+  font-size: 1.5rem;
   font-smooth: auto;
   text-align: center;
   overflow-x: hidden;
 }
+
+// Menu/Nav
 
 .menu {
   position: fixed;
@@ -118,7 +128,7 @@ body {
   }
 
   &:checked ~ main {
-    transform: translateX(250px);
+    transform: translateX(500px);
     transition: transform $base-duration ease;
   }
 }
@@ -127,7 +137,7 @@ body {
   position: fixed;
   top: 0;
   left: -210px;
-  width: 300px;
+  width: 500px;
   height: 500vh;
   margin: 0;
   padding: 0;
@@ -150,9 +160,9 @@ body {
         position: relative;
         display: block;
         margin: 0;
-        padding: 15px 20px;
+        padding: 20px 20px;
         color: $white;
-        font-size: 2em;
+        font-size: 3rem;
         text-decoration: none;
         text-transform: uppercase;
 
@@ -182,10 +192,7 @@ body {
   }
 }
 
-.container {
-  width: 75%;
-  margin: 0 auto;
-}
+// Main Content
 
 main {
   position: relative;
@@ -197,23 +204,29 @@ main {
   transition: transform $base-duration ease;
   z-index: 0;
   background-color: $white;
+}
 
-  header {
-    background-color: $white;
-    margin-left: 50px;
+header #home {
+  background-color: $white;
+  display: block;
+  align-items: center;
+}
 
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-    }
-  }
+header #home img {
+  width: 25%;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 h1 {
   font-family: $cooper-black;
   color: $sienna;
-  font-size: 5em;
+  font-size: 8rem;
   margin-bottom: 30px;
 }
 
@@ -221,14 +234,14 @@ section {
   position: relative;
   display: block;
   margin: 0;
-  padding: 50px 0;
+  padding: 50px;
   background-color: $white;
   z-index: 100;
 
   p {
     margin-bottom: 30px;
     text-transform: uppercase;
-    line-height: 1.2em;
+    line-height: 2.5rem;
   }
 }
 
@@ -237,20 +250,39 @@ blockquote {
   color: $grey;
   padding-bottom: 20px;
   border-bottom: 1px solid $black;
-  line-height: 1.2em;
+  line-height: 1.8rem;
+  font-size: 1rem;
 }
 
-img {
-  width: 100%;
-  height: auto;
+// Images
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 0;
 }
+
+.gallery_img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery_item--1 {
+  grid-column: 1;
+}
+
+.gallery_item--2 {
+  grid-column: 2;
+}
+
+.gallery_item--3 {
+  grid-column: 3;
+}
+// Contact Form
 
 form {
   text-align: left;
-}
-
-.back h1 {
-  margin: 0;
+  font-size: 3rem;
 }
 
 form label,
@@ -268,6 +300,7 @@ form textarea {
   width: 100%;
   color: $black;
   text-transform: initial;
+  font-size: 2.5rem;
 }
 
 form label {
@@ -285,4 +318,9 @@ form input[type='submit'] {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
+}
+
+// Footer
+.copyright p {
+  font-size: 0.75rem;
 }

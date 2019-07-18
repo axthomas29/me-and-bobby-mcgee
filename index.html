@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Me & Bobby (McGee) | Author Page</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!--- FontAwesome CDN version 5.5 -->
     <link
       rel="stylesheet"
@@ -22,7 +23,7 @@
     
     <nav class="nav">
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#book">Book</a></li>
         <li><a href="#speaking">Speaking</a></li>
@@ -31,12 +32,6 @@
     </nav>
 
     <main>
-      <header>
-          <img src="img/logo.png" alt="logo" />
-        </header>
-        <section class="hero-image">
-          <img src="img/hugging-dog.jpg" alt="model hugging dog" />
-        </section>
         <section id="about">
           <div class="container">
             <h1>About Me</h1>
@@ -57,13 +52,17 @@
             </p>
           </div>
         </section>
-            <figure class="img">
-              <img src="img/closing-eyes.jpg" alt="model closing her eyes" />
-              <img src="img/posing-dog.jpg" alt="model with dog" />
-              <img src="img/kiss-dog.jpg" alt="model kissing dog" />
-            </figure>
-          </div>
-        </section>
+        <div class="gallery">
+          <figure class="gallery_item gallery_item--1">
+            <img src="img/kiss-dog.jpg" class="gallery_img" alt="Image 1" />
+          </figure>
+          <figure class="gallery_item gallery_item--2">
+            <img src="img/closing-eyes.jpg" class="gallery_img" alt="Image 2" />
+          </figure>
+          <figure class="gallery_item gallery_item--3">
+            <img src="img/hugging-dog.jpg" class="gallery_img" alt="Image 3" />
+          </figure>
+        </div>
         <section id="book">
             <div class="container">
               <h1>The Book</h1>
@@ -84,13 +83,17 @@
               </p>
             </div>
           </section>
-            <figure class="img">
-              <img src="img/bowl-dog.jpg" alt="giving bowl of water to dog" />
-              <img src="img/nose-dog.jpg" alt="model with dog" />
-              <img src="img/yawn-dog.jpg" alt="dog yawning" />
+          <div class="gallery">
+            <figure class="gallery_item gallery_item--1">
+              <img src="img/kiss-dog.jpg" class="gallery_img" alt="Image 1" />
             </figure>
-            </div>
-          </section>
+            <figure class="gallery_item gallery_item--2">
+              <img src="img/closing-eyes.jpg" class="gallery_img" alt="Image 2" />
+            </figure>
+            <figure class="gallery_item gallery_item--3">
+              <img src="img/hugging-dog.jpg" class="gallery_img" alt="Image 3" />
+            </figure>
+          </div>
         <section id="speaking">
           <div class="container">
             <h1>Speaking</h1>
@@ -108,13 +111,18 @@
               pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
               culpa qui officia deserunt mollit anim id est laborum.
             </p>
-          </section>
-          <figure class="img">
-            <img src="img/chair-laying-down-dog.jpg" alt="dog laying down near model" />
-            <img src="img/sitting-dog.jpg" alt="dog sitting" />
-          </figure>
-          </div>
         </section>
+        <div class="gallery">
+          <figure class="gallery_item gallery_item--1">
+            <img src="img/kiss-dog.jpg" class="gallery_img" alt="Image 1" />
+          </figure>
+          <figure class="gallery_item gallery_item--2">
+            <img src="img/closing-eyes.jpg" class="gallery_img" alt="Image 2" />
+          </figure>
+          <figure class="gallery_item gallery_item--3">
+            <img src="img/hugging-dog.jpg" class="gallery_img" alt="Image 3" />
+          </figure>
+        </div>
       <section id="contact">
         <div class="container">
           <h1>Contact Me</h1>

@@ -6,8 +6,9 @@
   font-family: 'Cooper Black';
   src: url(../fonts/cooper-black.otf) format("opentype"); }
 
-html {
-  scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; } }
 
 *,
 *:before,
@@ -16,13 +17,16 @@ html {
   box-sizing: border-box;
   outline: none; }
 
+html {
+  width: 100%; }
+
 body {
   background-color: #f9f9f9;
   font-family: "Pompadour", sans-serif;
   color: #020202;
   margin: 0;
   padding: 0;
-  font-size: 1em;
+  font-size: 1.5rem;
   font-smooth: auto;
   text-align: center;
   overflow-x: hidden; }
@@ -117,9 +121,9 @@ body {
     -o-transition: left 500ms ease;
     transition: left 500ms ease; }
   #menu:checked ~ main {
-    -webkit-transform: translateX(250px);
-    -ms-transform: translateX(250px);
-    transform: translateX(250px);
+    -webkit-transform: translateX(500px);
+    -ms-transform: translateX(500px);
+    transform: translateX(500px);
     -webkit-transition: -webkit-transform 500ms ease;
     transition: -webkit-transform 500ms ease;
     -o-transition: transform 500ms ease;
@@ -130,7 +134,7 @@ body {
   position: fixed;
   top: 0;
   left: -210px;
-  width: 300px;
+  width: 500px;
   height: 500vh;
   margin: 0;
   padding: 0;
@@ -152,9 +156,9 @@ body {
         position: relative;
         display: block;
         margin: 0;
-        padding: 15px 20px;
+        padding: 20px 20px;
         color: #f9f9f9;
-        font-size: 2em;
+        font-size: 3rem;
         text-decoration: none;
         text-transform: uppercase; }
         .nav ul li a:before {
@@ -178,10 +182,6 @@ body {
             -o-transition: width 250ms ease;
             transition: width 250ms ease; }
 
-.container {
-  width: 75%;
-  margin: 0 auto; }
-
 main {
   position: relative;
   display: block;
@@ -199,48 +199,77 @@ main {
   transition: transform 500ms ease, -webkit-transform 500ms ease;
   z-index: 0;
   background-color: #f9f9f9; }
-  main header {
-    background-color: #f9f9f9;
-    margin-left: 50px; }
-    main header img {
-      display: block;
-      max-width: 100%;
-      height: auto; }
+
+header #home {
+  background-color: #f9f9f9;
+  display: block;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+header #home img {
+  width: 25%; }
+
+.container {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px; }
 
 h1 {
   font-family: "Cooper Black", serif;
   color: #c98b5b;
-  font-size: 5em;
+  font-size: 8rem;
   margin-bottom: 30px; }
 
 section {
   position: relative;
   display: block;
   margin: 0;
-  padding: 50px 0;
+  padding: 50px;
   background-color: #f9f9f9;
   z-index: 100; }
   section p {
     margin-bottom: 30px;
     text-transform: uppercase;
-    line-height: 1.2em; }
+    line-height: 2.5rem; }
 
 blockquote {
   font-style: italic;
   color: #465553;
   padding-bottom: 20px;
   border-bottom: 1px solid #020202;
-  line-height: 1.2em; }
+  line-height: 1.8rem;
+  font-size: 1rem; }
 
-img {
+.gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 0; }
+
+.gallery_img {
   width: 100%;
-  height: auto; }
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.gallery_item--1 {
+  -ms-grid-column: 1;
+  grid-column: 1; }
+
+.gallery_item--2 {
+  -ms-grid-column: 2;
+  grid-column: 2; }
+
+.gallery_item--3 {
+  -ms-grid-column: 3;
+  grid-column: 3; }
 
 form {
-  text-align: left; }
-
-.back h1 {
-  margin: 0; }
+  text-align: left;
+  font-size: 3rem; }
 
 form label,
 form input {
@@ -255,7 +284,8 @@ form textarea {
   padding: 5px;
   width: 100%;
   color: #020202;
-  text-transform: initial; }
+  text-transform: initial;
+  font-size: 2.5rem; }
 
 form label {
   margin: 15px 0; }
@@ -271,3 +301,6 @@ form input[type='submit'] {
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold; }
+
+.copyright p {
+  font-size: 0.75rem; }
