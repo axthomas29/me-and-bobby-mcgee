@@ -322,6 +322,46 @@ form input[type='submit'] {
 // Footer
 .copyright p {
   font-size: 0.75rem;
+  color: $grey;
+}
+
+// Chart
+h2 {
+  font-size: 1rem;
+  color: $pink;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table {
+  width: 100%;
+  table-layout: auto;
+}
+.tbl-header {
+  background-color: $black;
+}
+.tbl-content {
+  height: 300px;
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid $grey;
+}
+th {
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: $white;
+  text-transform: uppercase;
+}
+td {
+  padding: 15px;
+  text-align: left;
+  vertical-align: middle;
+  font-size: 1rem;
+  color: $black;
+  border-bottom: solid 1px $grey;
+  text-transform: uppercase;
 }
 
 // Tablet Breakpoint
@@ -334,6 +374,10 @@ form input[type='submit'] {
   form input,
   form textarea {
     font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1.5em;
   }
 }
 
@@ -353,6 +397,10 @@ form input[type='submit'] {
 
   section p {
     line-height: 1.25em;
+  }
+
+  h2 {
+    font-size: 2.5em;
   }
 
   .copyright p {
