@@ -21,7 +21,7 @@ $('a[href*="#"]')
           {
             scrollTop: target.offset().top
           },
-          5000,
+          2000,
           function() {
             // Callback after animation
             // Must change focus!
