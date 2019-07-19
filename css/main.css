@@ -266,7 +266,7 @@ main {
   -o-transition: transform 500ms ease;
   transition: transform 500ms ease;
   transition: transform 500ms ease, -webkit-transform 500ms ease;
-  z-index: 0;
+  z-index: 1;
   background-color: #f9f9f9; }
 
 header #home {
@@ -291,6 +291,7 @@ h1 {
   font-size: 8rem;
   margin-bottom: 30px; }
 
+header,
 section {
   position: relative;
   display: block;
@@ -298,6 +299,7 @@ section {
   padding: 50px;
   background-color: #f9f9f9;
   z-index: 100; }
+  header p,
   section p {
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -311,30 +313,51 @@ blockquote {
   line-height: 1.8rem;
   font-size: 1rem; }
 
+.codrops-header {
+  text-align: center;
+  height: 100vh;
+  overflow: hidden;
+  background: url(../img/hug-dog-2.jpg) no-repeat center center;
+  background-size: auto; }
+
+.codrops-header h1 {
+  margin: 0;
+  font-size: 9em;
+  position: absolute;
+  width: 100%;
+  top: 20vh;
+  color: #020202;
+  pointer-events: none;
+  text-shadow: 8px 5px #c98b5b; }
+
+.codrops-header h1 span {
+  color: #020202;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-shadow: none;
+  font-family: "Pompadour", sans-serif;
+  text-shadow: 8px 5px #e7a1a3; }
+
+.hero {
+  position: absolute;
+  top: 80px;
+  left: 80px;
+  bottom: 80px;
+  right: 80px;
+  overflow: hidden;
+  background-color: rgba(249, 249, 249, 0.5); }
+
 .gallery {
   display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto auto;
-  grid-template-columns: auto auto auto;
-  grid-column-gap: 0; }
+  display: grid; }
 
 .gallery_img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover; }
-
-.gallery_item--1 {
-  -ms-grid-column: 1;
-  grid-column: 1; }
-
-.gallery_item--2 {
-  -ms-grid-column: 2;
-  grid-column: 2; }
-
-.gallery_item--3 {
-  -ms-grid-column: 3;
-  grid-column: 3; }
 
 h2 {
   font-size: 1rem;
@@ -473,21 +496,30 @@ i {
   font-size: 0.75rem;
   color: #465553; }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   form {
     font-size: 1.25em; }
   form input,
   form textarea {
     font-size: 1em; }
   h2 {
-    font-size: 1.5em; } }
+    font-size: 1.5em; }
+  .codrops-header h1 {
+    top: 15vh; } }
 
-@media only screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   .container {
     width: 75%;
     height: auto;
     margin: 0 auto;
     padding: 20px; }
+  .codrops-header {
+    height: 101vh; }
+  .codrops-header .hero .hero_imgwrap h1 {
+    font-size: 7em;
+    top: 30vh; }
+  .codrops-header h1 span {
+    font-size: 0.9em; }
   blockquote {
     font-size: 1em; }
   section p {
@@ -495,4 +527,24 @@ i {
   h2 {
     font-size: 2.5em; }
   .copyright p {
-    font-size: 0.75em; } }
+    font-size: 0.75em; }
+  .gallery {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 0; }
+  .gallery_img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover; }
+  .gallery_item--1 {
+    -ms-grid-column: 1;
+    grid-column: 1; }
+  .gallery_item--2 {
+    -ms-grid-column: 2;
+    grid-column: 2; }
+  .gallery_item--3 {
+    -ms-grid-column: 3;
+    grid-column: 3; } }
