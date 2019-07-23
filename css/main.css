@@ -75,10 +75,6 @@ body {
   100% {
     top: 0; } }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto; } }
-
 *,
 *:before,
 *:after {
@@ -283,7 +279,8 @@ header #home img {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 20px; }
+  padding: 280px 20px 280px 20px;
+  justify-items: center; }
 
 h1 {
   font-family: "Cooper Black", serif;
@@ -351,7 +348,9 @@ blockquote {
 
 .gallery {
   display: -ms-grid;
-  display: grid; }
+  display: grid;
+  background-image: url(../img/pattern-2.jpg);
+  background-blend-mode: lighten; }
 
 .gallery_img {
   width: 100%;
@@ -432,6 +431,10 @@ form input[type='submit'] {
   font-weight: bold; }
   form input[type='submit']:hover {
     color: #465553; }
+
+footer .container {
+  padding: 0px;
+  margin: 0 auto; }
 
 .fa-github {
   -webkit-transition: all 0.2s ease-in-out;
@@ -548,3 +551,7 @@ i {
   .gallery_item--3 {
     -ms-grid-column: 3;
     grid-column: 3; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto; } }
