@@ -44,3 +44,6 @@ $('a[href*="#"]').each(function() {
     }
   }
 });
+
+// h1 animation
+ScrollReveal().reveal('.animation', { easing: 'ease-in' });
