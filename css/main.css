@@ -203,9 +203,9 @@ header {
   -ms-flex-align: end;
   align-items: flex-end;
   height: 50vh;
-  background-image: url(../img/hug-dog-2.jpg);
+  background-image: url(../img/sitting-dog.jpg);
   background-size: cover;
-  background-position: -250px; }
+  background-position: center; }
 
 header h1 {
   font-size: 5.25em;
@@ -332,25 +332,18 @@ header h1 span {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 50px 30px 50px 30px;
-  justify-items: center; }
+  padding: 100px 30px 100px 30px; }
 
 h1 {
   font-family: "Cooper Black", serif;
   color: #c98b5b;
-  font-size: 8rem;
-  margin-bottom: 30px; }
+  font-size: 9rem;
+  margin: auto; }
 
-section {
-  position: relative;
-  display: block;
-  margin: 0;
-  padding: 10px;
-  background-color: #f9f9f9; }
-  section p {
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    line-height: 2.5rem; }
+p {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  line-height: 2.75rem; }
 
 blockquote {
   font-style: italic;
@@ -410,13 +403,13 @@ td {
   text-transform: uppercase; }
 
 form {
-  text-align: left;
-  font-size: 3rem; }
+  text-align: left; }
 
 form label,
 form input {
   display: block;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-size: 2rem; }
 
 form input,
 form textarea {
@@ -426,8 +419,7 @@ form textarea {
   padding: 5px;
   width: 100%;
   color: #020202;
-  text-transform: initial;
-  font-size: 2.5rem; }
+  text-transform: initial; }
 
 form label {
   margin: 15px 0; }
@@ -442,13 +434,20 @@ form input[type='submit'] {
   color: #020202;
   cursor: pointer;
   text-transform: uppercase;
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 2em; }
   form input[type='submit']:hover {
     color: #465553; }
 
-footer .container {
-  padding: 0px;
-  margin: 0 auto; }
+.dog-image img {
+  width: 100%;
+  height: 75%;
+  padding: 10px; }
+
+footer {
+  display: block;
+  margin: 0 auto;
+  padding: 10px; }
 
 .fa-github {
   -webkit-transition: all 0.2s ease-in-out;
@@ -509,9 +508,11 @@ i {
   letter-spacing: 10px;
   padding: 2cm 0cm 1cm 0cm; }
 
-.copyright p {
-  font-size: 0.75rem;
-  color: #465553; }
+.copyright {
+  padding: 10px; }
+  .copyright p {
+    font-size: 0.75rem;
+    color: #465553; }
 
 @media screen and (min-width: 768px) {
   form {
