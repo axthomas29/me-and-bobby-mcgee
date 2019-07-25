@@ -6,75 +6,6 @@
   font-family: 'Cooper Black';
   src: url(../fonts/cooper-black.otf) format("opentype"); }
 
-body {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  font-family: "Pompadour", sans-serif; }
-
-.wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-
-.text {
-  color: #c98b5b;
-  display: inline-block;
-  margin-left: 5px; }
-
-.bounceball {
-  position: relative;
-  display: inline-block;
-  height: 37px;
-  width: 15px; }
-  .bounceball:before {
-    position: absolute;
-    content: '';
-    display: block;
-    top: 0;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #e7a1a3;
-    -webkit-transform-origin: 50%;
-    -ms-transform-origin: 50%;
-    transform-origin: 50%;
-    -webkit-animation: bounce 500ms alternate infinite ease;
-    animation: bounce 500ms alternate infinite ease; }
-
-@-webkit-keyframes bounce {
-  0% {
-    top: 30px;
-    height: 5px;
-    border-radius: 60px 60px 20px 20px;
-    -webkit-transform: scaleX(2);
-    transform: scaleX(2); }
-  35% {
-    height: 15px;
-    border-radius: 50%;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1); }
-  100% {
-    top: 0; } }
-
-@keyframes bounce {
-  0% {
-    top: 30px;
-    height: 5px;
-    border-radius: 60px 60px 20px 20px;
-    -webkit-transform: scaleX(2);
-    transform: scaleX(2); }
-  35% {
-    height: 15px;
-    border-radius: 50%;
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1); }
-  100% {
-    top: 0; } }
-
 *,
 *:before,
 *:after {
@@ -83,18 +14,17 @@ body {
   outline: none; }
 
 html {
-  width: 100%; }
+  width: 100%;
+  height: 100vh;
+  font-family: "Pompadour", sans-serif;
+  background-color: #f9f9f9;
+  color: #020202; }
 
 body {
-  background-color: #f9f9f9;
-  font-family: "Pompadour", sans-serif;
-  color: #020202;
   margin: 0;
   padding: 0;
-  font-size: 1.5rem;
-  font-smooth: auto;
   text-align: center;
-  overflow-x: hidden; }
+  font-size: 16px; }
 
 .menu {
   position: fixed;
@@ -265,15 +195,36 @@ main {
   z-index: 1;
   background-color: #f9f9f9; }
 
-header #home {
-  background-color: #f9f9f9;
-  display: block;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  height: 50vh;
+  background-image: url(../img/hug-dog-2.jpg);
+  background-size: cover;
+  background-position: -250px; }
 
-header #home img {
-  width: 25%; }
+header h1 {
+  font-size: 5.25em;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 1vh;
+  padding: 0px 0px 0px 80px;
+  color: #020202;
+  text-shadow: 8px 5px #c98b5b; }
+
+header h1 span {
+  color: #020202;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-shadow: none;
+  font-family: "Pompadour", sans-serif;
+  text-shadow: 8px 5px #e7a1a3; }
 
 .bounce-in-top {
   -webkit-animation: bounce-in-top 1.5s 0.5s;
@@ -377,10 +328,11 @@ header #home img {
     animation-timing-function: ease-out; } }
 
 .container {
+  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 280px 20px 280px 20px;
+  padding: 50px 30px 50px 30px;
   justify-items: center; }
 
 h1 {
@@ -389,15 +341,12 @@ h1 {
   font-size: 8rem;
   margin-bottom: 30px; }
 
-header,
 section {
   position: relative;
   display: block;
   margin: 0;
-  padding: 50px;
-  background-color: #f9f9f9;
-  z-index: 100; }
-  header p,
+  padding: 10px;
+  background-color: #f9f9f9; }
   section p {
     margin-bottom: 30px;
     text-transform: uppercase;
@@ -410,42 +359,6 @@ blockquote {
   border-bottom: 1px solid #020202;
   line-height: 1.8rem;
   font-size: 1rem; }
-
-.codrops-header {
-  text-align: center;
-  height: 100vh;
-  overflow: hidden;
-  background: url(../img/hug-dog-2.jpg) no-repeat center center;
-  background-size: auto; }
-
-.codrops-header h1 {
-  margin: 0;
-  font-size: 9em;
-  position: absolute;
-  width: 100%;
-  top: 20vh;
-  color: #020202;
-  pointer-events: none;
-  text-shadow: 8px 5px #c98b5b; }
-
-.codrops-header h1 span {
-  color: #020202;
-  font-size: 0.75em;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-shadow: none;
-  font-family: "Pompadour", sans-serif;
-  text-shadow: 8px 5px #e7a1a3; }
-
-.hero {
-  position: absolute;
-  top: 80px;
-  left: 80px;
-  bottom: 80px;
-  right: 80px;
-  overflow: hidden;
-  background-color: rgba(249, 249, 249, 0.5); }
 
 .gallery {
   display: -ms-grid;

@@ -21,68 +21,6 @@ $sienna: #c98b5b;
 $grey: #465553;
 $black: #020202;
 
-// Preloader
-$width: 15px;
-$height: 15px;
-
-$bounce_height: 30px;
-
-body {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  font-family: $pompadour;
-}
-
-.wrap {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.text {
-  color: $sienna;
-  display: inline-block;
-  margin-left: 5px;
-}
-
-.bounceball {
-  position: relative;
-  display: inline-block;
-  height: 37px;
-  width: $width;
-  &:before {
-    position: absolute;
-    content: '';
-    display: block;
-    top: 0;
-    width: $width;
-    height: $height;
-    border-radius: 50%;
-    background-color: $pink;
-    transform-origin: 50%;
-    animation: bounce 500ms alternate infinite ease;
-  }
-}
-
-@keyframes bounce {
-  0% {
-    top: $bounce_height;
-    height: 5px;
-    border-radius: 60px 60px 20px 20px;
-    transform: scaleX(2);
-  }
-  35% {
-    height: $height;
-    border-radius: 50%;
-    transform: scaleX(1);
-  }
-  100% {
-    top: 0;
-  }
-}
-
 *,
 *:before,
 *:after {
@@ -91,21 +29,19 @@ body {
 }
 
 // General
-
 html {
   width: 100%;
+  height: 100vh;
+  font-family: $pompadour;
+  background-color: $white;
+  color: $black;
 }
 
 body {
-  background-color: $white;
-  font-family: $pompadour;
-  color: $black;
   margin: 0;
   padding: 0;
-  font-size: 1.5rem;
-  font-smooth: auto;
   text-align: center;
-  overflow-x: hidden;
+  font-size: 16px;
 }
 
 // Menu/Nav
@@ -259,14 +195,34 @@ main {
 }
 
 // Header
-header #home {
-  background-color: $white;
-  display: block;
-  align-items: center;
+header {
+  display: flex;
+  align-items: flex-end;
+  height: 50vh;
+  background-image: url(../img/hug-dog-2.jpg);
+  background-size: cover;
+  background-position: -250px;
 }
 
-header #home img {
-  width: 25%;
+header h1 {
+  font-size: 5.25em;
+  margin: 0;
+  position: absolute;
+  width: 100%;
+  top: 1vh;
+  padding: 0px 0px 0px 80px;
+  color: $black;
+  text-shadow: 8px 5px $sienna;
+}
+
+header h1 span {
+  color: $black;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-shadow: none;
+  font-family: $pompadour;
+  text-shadow: 8px 5px $pink;
 }
 
 // Animista Header Effects
@@ -391,10 +347,11 @@ header #home img {
 }
 
 .container {
+  display: block;
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 280px 20px 280px 20px;
+  padding: 50px 30px 50px 30px;
   justify-items: center;
 }
 
@@ -407,14 +364,12 @@ h1 {
   margin-bottom: 30px;
 }
 
-header,
 section {
   position: relative;
   display: block;
   margin: 0;
-  padding: 50px;
+  padding: 10px;
   background-color: $white;
-  z-index: 100;
 
   p {
     margin-bottom: 30px;
@@ -433,46 +388,6 @@ blockquote {
 }
 
 // Header
-
-.codrops-header {
-  text-align: center;
-  height: 100vh;
-  overflow: hidden;
-  background: url(../img/hug-dog-2.jpg) no-repeat center center;
-  background-size: auto;
-}
-
-.codrops-header h1 {
-  margin: 0;
-  font-size: 9em;
-  position: absolute;
-  width: 100%;
-  top: 20vh;
-  color: $black;
-  pointer-events: none;
-  text-shadow: 8px 5px $sienna;
-}
-
-.codrops-header h1 span {
-  color: $black;
-  font-size: 0.75em;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 3px;
-  text-shadow: none;
-  font-family: $pompadour;
-  text-shadow: 8px 5px $pink;
-}
-
-.hero {
-  position: absolute;
-  top: 80px;
-  left: 80px;
-  bottom: 80px;
-  right: 80px;
-  overflow: hidden;
-  background-color: rgba(249, 249, 249, 0.5);
-}
 
 // Images
 .gallery {
