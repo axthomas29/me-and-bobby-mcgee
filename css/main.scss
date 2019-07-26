@@ -209,10 +209,10 @@ header h1 {
   margin: 0;
   position: absolute;
   width: 100%;
-  top: 1vh;
+  top: 0.5vh;
   padding: 0px 0px 0px 80px;
   color: $black;
-  text-shadow: 8px 5px $sienna;
+  text-shadow: 3px 5px $sienna;
 }
 
 header h1 span {
@@ -222,7 +222,7 @@ header h1 span {
   letter-spacing: 3px;
   text-shadow: none;
   font-family: $pompadour;
-  text-shadow: 8px 5px $pink;
+  text-shadow: 3px 5px $pink;
 }
 
 // Animista Header Effects
@@ -548,70 +548,77 @@ i {
 
 .copyright {
   padding: 10px;
-
-  p {
-    font-size: 0.75rem;
-    color: $grey;
-  }
+  color: $grey;
+  font-size: 0.5em;
 }
 
 // Tablet Breakpoint
 @media screen and (min-width: 768px) {
+  blockquote {
+    font-size: 2em;
+    line-height: 1.5em;
+  }
+
+  p {
+    font-size: 2em;
+  }
+
   form {
-    font-size: 1.25em;
+    font-size: 1.5em;
   }
 
   form input,
   form textarea {
-    font-size: 1em;
-  }
-
-  h2 {
     font-size: 1.5em;
   }
 
-  .codrops-header h1 {
-    top: 15vh;
+  h2 {
+    font-size: 3em;
+  }
+
+  .dog-image img {
+    width: 700px;
+    height: 600px;
+  }
+
+  .copyright p {
+    font-size: 2.75em;
   }
 }
 
 // Desktop Breakpoint
 
-@media screen and (min-width: 1024px) {
-  .container {
-    width: 75%;
-    height: auto;
-    margin: 0 auto;
-    padding: 20px;
+@media screen and (min-width: 1281px) {
+  header {
+    height: 100vh;
   }
 
-  .codrops-header {
-    height: 101vh;
+  header h1 {
+    display: flex;
+    align-items: flex-end;
+    padding: 0px 85px;
   }
 
-  .codrops-header .hero .hero_imgwrap h1 {
-    font-size: 7em;
-    top: 30vh;
-  }
-
-  .codrops-header h1 span {
-    font-size: 0.9em;
+  .dog-image img {
+    width: 600px;
+    height: 500px;
   }
 
   blockquote {
-    font-size: 1em;
+    font-size: 2em;
   }
 
-  section p {
+  p {
     line-height: 1.25em;
+    font-size: 2em;
   }
 
   h2 {
-    font-size: 2.5em;
+    font-size: 3em;
   }
 
   .copyright p {
-    font-size: 0.75em;
+    font-size: 2em;
   }
 
   // Images
