@@ -12,7 +12,7 @@
 // Timing for Nav
 $base-duration: 500ms;
 
-// Colors
+// Colors and Fonts
 $pompadour: 'Pompadour', sans-serif;
 $cooper-black: 'Cooper Black', serif;
 $white: #f9f9f9;
@@ -381,7 +381,7 @@ blockquote {
 // Images
 .gallery {
   display: grid;
-  background-image: url(../img/pattern-2.jpg);
+  background-image: url(../img/pattern-2.JPG);
   background-blend-mode: lighten;
 }
 

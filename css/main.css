@@ -356,7 +356,7 @@ blockquote {
 .gallery {
   display: -ms-grid;
   display: grid;
-  background-image: url(../img/pattern-2.jpg);
+  background-image: url(../img/pattern-2.JPG);
   background-blend-mode: lighten; }
 
 .gallery_img {
