@@ -43,8 +43,8 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: #c98b5b;
   border-radius: 50%;
   -webkit-box-shadow: 0 0 20px rgba(2, 2, 2, 0.2);
@@ -99,17 +99,20 @@ body {
       transition: -webkit-transform 250ms ease;
       -o-transition: transform 250ms ease;
       transition: transform 250ms ease;
-      transition: transform 250ms ease, -webkit-transform 250ms ease; }
+      transition: transform 250ms ease, -webkit-transform 250ms ease;
+      width: 100%; }
       #menu:checked ~ .menu span:nth-of-type(1) {
-        -webkit-transform: translateY(1px) rotate(45deg);
-        -ms-transform: translateY(1px) rotate(45deg);
-        transform: translateY(1px) rotate(45deg); }
+        -webkit-transform: translateY(5px) rotate(45deg);
+        -ms-transform: translateY(5px) rotate(45deg);
+        transform: translateY(5px) rotate(45deg);
+        height: 5px; }
       #menu:checked ~ .menu span:nth-of-type(2) {
         display: none; }
       #menu:checked ~ .menu span:nth-of-type(3) {
         -webkit-transform: translateY(-1px) rotate(-45deg);
         -ms-transform: translateY(-1px) rotate(-45deg);
-        transform: translateY(-1px) rotate(-45deg); }
+        transform: translateY(-1px) rotate(-45deg);
+        height: 5px; }
   #menu:checked ~ .nav {
     left: 0px;
     -webkit-transition: left 500ms ease;
@@ -332,7 +335,7 @@ header h1 span {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 100px 30px 100px 30px; }
+  padding: 5rem 5rem 5rem 5rem; }
 
 h1 {
   font-family: "Cooper Black", serif;
@@ -342,22 +345,21 @@ h1 {
 
 p {
   margin-bottom: 30px;
-  text-transform: uppercase;
-  line-height: 2.75rem; }
+  line-height: 2.75rem;
+  letter-spacing: 1px; }
 
 blockquote {
   font-style: italic;
   color: #465553;
   padding-bottom: 20px;
   border-bottom: 1px solid #020202;
-  line-height: 1.8rem;
   font-size: 1rem; }
 
 .gallery {
   display: -ms-grid;
   display: grid;
   background-image: url(../img/pattern-1.jpg);
-  background-blend-mode: lighten; }
+  background-size: contain; }
 
 .gallery_img {
   width: 100%;
@@ -509,9 +511,14 @@ i {
   padding: 2cm 0cm 1cm 0cm; }
 
 .copyright {
-  padding: 10px;
+  padding: 3rem;
   color: #465553;
   font-size: 0.5em; }
+  .copyright a {
+    text-decoration: none;
+    color: #465553; }
+    .copyright a:hover {
+      color: #e7a1a3; }
 
 @media screen and (min-width: 768px) {
   blockquote {
@@ -530,7 +537,7 @@ i {
     width: 700px;
     height: 600px; }
   .copyright p {
-    font-size: 2.75em; } }
+    font-size: 1rem; } }
 
 @media screen and (min-width: 1281px) {
   header {
@@ -546,6 +553,10 @@ i {
   .dog-image img {
     width: 600px;
     height: 500px; }
+  .container {
+    width: 60%; }
+  h1 {
+    font-size: 6rem; }
   blockquote {
     font-size: 2em; }
   p {

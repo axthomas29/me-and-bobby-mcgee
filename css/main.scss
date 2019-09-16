@@ -13,8 +13,10 @@
 $base-duration: 500ms;
 
 // Colors and Fonts
-$pompadour: 'Pompadour', sans-serif;
-$cooper-black: 'Cooper Black', serif;
+$pompadour: 'Pompadour',
+sans-serif;
+$cooper-black: 'Cooper Black',
+serif;
 $white: #f9f9f9;
 $pink: #e7a1a3;
 $sienna: #c98b5b;
@@ -54,8 +56,8 @@ body {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: $sienna;
   border-radius: 50%;
   box-shadow: 0 0 20px rgba($black, 0.2);
@@ -87,7 +89,7 @@ body {
 #menu {
   display: none;
 
-  &:checked ~ .menu {
+  &:checked~.menu {
     background-color: transparent;
     transform: rotate(360deg);
     transition: transform 250ms ease;
@@ -95,9 +97,11 @@ body {
     span {
       background-color: $white;
       transition: transform 250ms ease;
+      width: 100%;
 
       &:nth-of-type(1) {
-        transform: translateY(1px) rotate(45deg);
+        transform: translateY(5px) rotate(45deg);
+        height: 5px;
       }
 
       &:nth-of-type(2) {
@@ -106,16 +110,17 @@ body {
 
       &:nth-of-type(3) {
         transform: translateY(-1px) rotate(-45deg);
+        height: 5px;
       }
     }
   }
 
-  &:checked ~ .nav {
+  &:checked~.nav {
     left: 0px;
     transition: left $base-duration ease;
   }
 
-  &:checked ~ main {
+  &:checked~main {
     transform: translateX(500px);
     transition: transform $base-duration ease;
   }
@@ -249,6 +254,7 @@ header h1 span {
     animation-timing-function: ease-in;
     opacity: 0;
   }
+
   38% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -256,36 +262,42 @@ header h1 span {
     animation-timing-function: ease-out;
     opacity: 1;
   }
+
   55% {
     -webkit-transform: translateY(-65px);
     transform: translateY(-65px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+
   72% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+
   81% {
     -webkit-transform: translateY(-28px);
     transform: translateY(-28px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+
   90% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+
   95% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -293,6 +305,7 @@ header h1 span {
     animation-timing-function: ease-out;
   }
 }
+
 @keyframes bounce-in-top {
   0% {
     -webkit-transform: translateY(-500px);
@@ -301,6 +314,7 @@ header h1 span {
     animation-timing-function: ease-in;
     opacity: 0;
   }
+
   38% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -308,36 +322,42 @@ header h1 span {
     animation-timing-function: ease-out;
     opacity: 1;
   }
+
   55% {
     -webkit-transform: translateY(-65px);
     transform: translateY(-65px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+
   72% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+
   81% {
     -webkit-transform: translateY(-28px);
     transform: translateY(-28px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+
   90% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
+
   95% {
     -webkit-transform: translateY(-8px);
     transform: translateY(-8px);
     -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
   }
+
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
@@ -353,7 +373,7 @@ header h1 span {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 100px 30px 100px 30px;
+  padding: 5rem 5rem 5rem 5rem;
 }
 
 h1 {
@@ -365,8 +385,8 @@ h1 {
 
 p {
   margin-bottom: 30px;
-  text-transform: uppercase;
   line-height: 2.75rem;
+  letter-spacing: 1px;
 }
 
 blockquote {
@@ -374,7 +394,6 @@ blockquote {
   color: $grey;
   padding-bottom: 20px;
   border-bottom: 1px solid $black;
-  line-height: 1.8rem;
   font-size: 1rem;
 }
 
@@ -382,7 +401,7 @@ blockquote {
 .gallery {
   display: grid;
   background-image: url(../img/pattern-1.jpg);
-  background-blend-mode: lighten;
+  background-size: contain;
 }
 
 .gallery_img {
@@ -472,9 +491,11 @@ form input[type='submit'] {
   border: 3px solid $pink;
   border-radius: 4px;
   color: $black;
+
   &:hover {
     color: $grey;
   }
+
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
@@ -547,9 +568,18 @@ i {
 }
 
 .copyright {
-  padding: 10px;
+  padding: 3rem;
   color: $grey;
   font-size: 0.5em;
+
+  a {
+    text-decoration: none;
+    color: $grey;
+
+    &:hover {
+      color: $pink;
+    }
+  }
 }
 
 // Tablet Breakpoint
@@ -582,7 +612,7 @@ i {
   }
 
   .copyright p {
-    font-size: 2.75em;
+    font-size: 1rem;
   }
 }
 
@@ -602,6 +632,14 @@ i {
   .dog-image img {
     width: 600px;
     height: 500px;
+  }
+
+  .container {
+    width: 60%;
+  }
+
+  h1 {
+    font-size: 6rem;
   }
 
   blockquote {
